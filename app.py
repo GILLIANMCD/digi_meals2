@@ -5,9 +5,11 @@ from bson.objectid import ObjectId
 
 app = Flask(__name__)
 
-MONGODB_URI = os.getenv("MONGO_URI")
-DBS_NAME = "digi_meals"
-COLLECTION_NAME = "recipes"
+
+app.config["MONGO_DBNAME"] = 'digi_meals'
+app.config["MONGO_URI"] = os.getenv('MONGO_URI')
+
+
 
 mongo = PyMongo(app)
 
