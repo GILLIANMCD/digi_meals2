@@ -1,0 +1,14 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        {% for task in recipe %}
+            {{task.name}}
+            {{task.description}}
+            {{task.ingredients}}
+            {{task.method}}
+            {{task.image-link}}
+        {% endfor %}
+    </body>
+</html>
