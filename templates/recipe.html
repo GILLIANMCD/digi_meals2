@@ -3,12 +3,12 @@
 
     </head>
     <body>
-        {% for task in recipe %}
+        <p>hi</p>
+        {% for task in recipes %}
             {{task.name}}
             {{task.description}}
             {{task.ingredients}}
             {{task.method}}
-            {{task.image-link}}
-        {% endfor %}
+            {% endfor %}
     </body>
 </html>

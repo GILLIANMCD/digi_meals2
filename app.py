@@ -10,13 +10,12 @@ app.config["MONGO_DBNAME"] = 'digi_meals'
 app.config["MONGO_URI"] = os.getenv('MONGO_URI')
 
 
-
 mongo = PyMongo(app)
 
 @app.route('/')
-@app.route('/get_recipe')
-def get_recipe():
-    return render_template("recipe.html", task=mongo.db.recipe.find())
+@app.route('/get_tasks')
+def get_tasks():
+    return render_template("recipe.html", recipes=mongo.db.recipes.find())
 
 
 
