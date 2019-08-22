@@ -2,14 +2,13 @@
 
 {% block carousel %}
 
-   {% for  in carousel %}
 
-<div class="carousel">
-    <h1>Hello</h1>
-    <a class="carousel-item" href="#one!"><img src="{{slide.image_link}}"></a>
+   {% for utensils in carousel %}
 
-  </div>
+    {{utensils.utensil}}
+    {{utensils.image_link}}
+    {{utensils.description}}
+    {{utensils.price}}
+
   {% endfor %}
-
-
   {% endblock %}

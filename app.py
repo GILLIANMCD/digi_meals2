@@ -28,6 +28,10 @@ def insert_recipe():
     recipe.insert_one(request.form.to_dict())
     return redirect(url_for('get_recipes'))
 
+@app.route('/get_carousel')
+def get_carousel():
+    return render_template("carousel.html", carousel=mongo.db.utensils.find())
+
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP', '127.0.0.1'),
